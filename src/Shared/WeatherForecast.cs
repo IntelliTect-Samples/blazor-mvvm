@@ -1,13 +1,25 @@
+using CommunityToolkit.Mvvm.ComponentModel;
+
 namespace IntelliTect.Example.BlazorMvvm.Shared
 {
-    public class WeatherForecast
+    public partial class WeatherForecast : ObservableObject
     {
-        public DateTime Date { get; set; }
+        [ObservableProperty]
+        private DateTime _date;
 
-        public int TemperatureC { get; set; }
+        [ObservableProperty]
+        private int _temperatureC;
 
-        public string? Summary { get; set; }
+        partial void OnTemperatureCChanged(int value)
+        {
+            TemperatureF = 32 + (int)(value / 0.5556);
+        }
 
-        public int TemperatureF => 32 + (int)(TemperatureC / 0.5556);
+        [ObservableProperty]
+        private string? _summary;
+
+        [ObservableProperty]
+        private int _temperatureF;
+
     }
 }
