@@ -7,12 +7,17 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="CommunityToolkit.Mvvm" Version="8.0.0" />
     <PackageReference Include="Microsoft.AspNetCore.Components.WebAssembly" Version="6.0.13" />
     <PackageReference Include="Microsoft.AspNetCore.Components.WebAssembly.DevServer" Version="6.0.13" PrivateAssets="all" />
   </ItemGroup>
 
   <ItemGroup>
     <ProjectReference Include="..\Shared\IntelliTect.Example.BlazorMvvm.Shared.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Using Include="CommunityToolkit.Mvvm.ComponentModel" />
   </ItemGroup>
 
 </Project>
