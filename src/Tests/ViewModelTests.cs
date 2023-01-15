@@ -1,3 +1,4 @@
+using FluentAssertions;
 using IntelliTect.Example.BlazorMvvm.Client.ViewModels;
 using IntelliTect.Example.BlazorMvvm.Shared;
 using Moq;
@@ -24,6 +25,39 @@ public class ViewModelTests
 
         // Assert
         mock.VerifyAnyRequest(Times.Once());
+    }
 
+    [Theory]
+    [InlineData("736F6D6520746578742068657265", "some text here")]
+    [InlineData("202020", "   ")]
+    [InlineData("", "")]
+    public void WhenReceiveConvertHexToAsciiMessage_ItConverts(string hex, string result)
+    {
+        // Arrange
+        var mocker = new AutoMocker();
+        var sut = mocker.CreateInstance<TextEntryViewModel>();
+
+        // Act
+        sut.Receive(new ConvertHexToAsciiMessage(hex));
+
+        // Assert
+        sut.AsciiText.Should().Be(result);
+    }
+
+    [Theory]
+    [InlineData("some text here", "736F6D6520746578742068657265")]
+    [InlineData("   ", "202020")]
+    [InlineData("", "")]
+    public void WhenReceiveConvertAsciiToHexMessage_ItConverts(string ascii, string result)
+    {
+        // Arrange
+        var mocker = new AutoMocker();
+        var sut = mocker.CreateInstance<HexEntryViewModel>();
+
+        // Act
+        sut.Receive(new ConvertAsciiToHexMessage(ascii));
+
+        // Assert
+        sut.HexText.Should().Be(result);
     }
 }
