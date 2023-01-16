@@ -7,7 +7,7 @@ public static class Dependencies
         services.AddTransient<FetchDataViewModel>();
         services.AddTransient<HexEntryViewModel>();
         services.AddTransient<TextEntryViewModel>();
-
+        services.AddTransient<EditContactViewModel>();
         return services;
     }
 }
