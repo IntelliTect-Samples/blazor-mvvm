@@ -3,9 +3,8 @@ using System.ComponentModel.DataAnnotations;
 
 namespace IntelliTect.Example.BlazorMvvm.Shared;
 
-public partial class ContactInfo : ObservableValidator
+public class ContactInfo : ObservableValidator
 {
-
     private string? _name;
 
     [Required]
@@ -36,4 +35,6 @@ public partial class ContactInfo : ObservableValidator
         get => _phoneNumber;
         set => SetProperty(ref _phoneNumber, value, true);
     }
+
+    public void Validate() => ValidateAllProperties();
 }
