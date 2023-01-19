@@ -10,13 +10,15 @@ A short example of integrating the MVVM Toolkit with a Blazor WASM client app
 
 # slides
 
-[TODO: link here]
+[Powerpoint Deck](https://github.com/IntelliTect-Samples/blazor-mvvm/raw/main/IntelliTect%20Dotnet%20Conference%20Presentation%20-%20Blazor%20WASM%20with%20Community%20MVVM%20Toolkit.pptx)
 
 # links
 
-https://learn.microsoft.com/en-us/windows/communitytoolkit/mvvm/introduction
+[MVVM Toolkit Source code](https://github.com/CommunityToolkit/dotnet)
 
-https://dotnet.microsoft.com/en-us/apps/aspnet/web-apps/blazor
+[MVVM Docs](https://aka.ms/mvvmtoolkit/docs)
+
+[Blazor Docs](https://dotnet.microsoft.com/en-us/apps/aspnet/web-apps/blazor)
 
 # developing
 
