@@ -20,6 +20,8 @@ A short example of integrating the MVVM Toolkit with a Blazor WASM client app
 
 [Blazor Docs](https://dotnet.microsoft.com/en-us/apps/aspnet/web-apps/blazor)
 
+[Check out this clever solution for page navigation in a MVVM-friendly way from Graeme Grant](https://github.com/gragra33/Blazing.Mvvm)
+
 # developing
 
 1. Open the .sln file in Visual Studio 2022 (or VS Code)
@@ -27,6 +29,7 @@ A short example of integrating the MVVM Toolkit with a Blazor WASM client app
 
 ### Author
 - Kelly Adams - Senior Typist at https://intellitect.com
+- kelly@intellitect.com
 - https://github.com/adamskt
-- @codesalad@fosstodon.org
+- Mastodon: @codesalad@fosstodon.org
 
